@@ -26,7 +26,7 @@ public class ZKNodeAcl implements Watcher {
 
 	private ZooKeeper zookeeper = null;
 	
-	public static final String zkServerPath = "192.168.1.110:2181";
+	public static final String zkServerPath = "192.168.229.131:2181";
 	public static final Integer timeout = 5000;
 	
 	public ZKNodeAcl() {}
@@ -84,14 +84,14 @@ public class ZKNodeAcl implements Watcher {
 //		zkServer.createZKNode("/aclimooc", "test".getBytes(), Ids.OPEN_ACL_UNSAFE);
 		
 		// 自定义用户认证访问
-//		List<ACL> acls = new ArrayList<ACL>();
-//		Id imooc1 = new Id("digest", AclUtils.getDigestUserPwd("imooc1:123456"));
-//		Id imooc2 = new Id("digest", AclUtils.getDigestUserPwd("imooc2:123456"));
-//		acls.add(new ACL(Perms.ALL, imooc1));
-//		acls.add(new ACL(Perms.READ, imooc2));
-//		acls.add(new ACL(Perms.DELETE | Perms.CREATE, imooc2));
-//		zkServer.createZKNode("/aclimooc/testdigest", "testdigest".getBytes(), acls);
-		
+		/*List<ACL> acls = new ArrayList<ACL>();
+		Id imooc1 = new Id("digest", AclUtils.getDigestUserPwd("imooc1:123456"));
+		Id imooc2 = new Id("digest", AclUtils.getDigestUserPwd("imooc2:123456"));
+		acls.add(new ACL(Perms.ALL, imooc1));
+		acls.add(new ACL(Perms.READ, imooc2));
+		acls.add(new ACL(Perms.DELETE | Perms.CREATE, imooc2));
+		zkServer.createZKNode("/aclimooc/testdigest", "testdigest".getBytes(), acls);
+		*/
 		// 注册过的用户必须通过addAuthInfo才能操作节点，参考命令行 addauth
 //		zkServer.getZookeeper().addAuthInfo("digest", "imooc1:123456".getBytes());
 //		zkServer.createZKNode("/aclimooc/testdigest/childtest", "childtest".getBytes(), Ids.CREATOR_ALL_ACL);

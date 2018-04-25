@@ -1,5 +1,4 @@
 package com.zk.demo;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
@@ -17,7 +16,7 @@ public class ZKGetChildrenList implements Watcher {
 
 	private ZooKeeper zookeeper = null;
 	
-	public static final String zkServerPath = "192.168.1.110:2181";
+	public static final String zkServerPath = "192.168.229.131:2181";
 	public static final Integer timeout = 5000;
 	
 	public ZKGetChildrenList() {}
@@ -48,10 +47,10 @@ public class ZKGetChildrenList implements Watcher {
 		 * path：父节点路径
 		 * watch：true或者false，注册一个watch事件
 		 */
-//		List<String> strChildList = zkServer.getZookeeper().getChildren("/imooc", true);
-//		for (String s : strChildList) {
-//			System.out.println(s);
-//		}
+		/*List<String> strChildList = zkServer.getZookeeper().getChildren("/imooc", true);
+		for (String s : strChildList) {
+			System.out.println(s);
+		} */
 		
 		// 异步调用
 		String ctx = "{'callback':'ChildrenCallback'}";
